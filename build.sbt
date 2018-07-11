@@ -7,4 +7,7 @@ scalaVersion := "2.12.6"
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
 
-libraryDependencies += guice
+libraryDependencies ++= Seq(
+  guice,
+  specs2 % Test
+)
