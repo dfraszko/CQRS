@@ -9,5 +9,7 @@ lazy val root = (project in file("."))
 
 libraryDependencies ++= Seq(
   guice,
-  specs2 % Test
+  "com.typesafe.play" %% "play-slick" % "3.0.2",
+  "com.h2database"    % "h2" % "1.4.196" % Runtime,
+  specs2              % Test
 )

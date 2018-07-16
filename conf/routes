@@ -2,4 +2,11 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           org.talend.training.ApplicationController.index
+GET     /                           org.talend.training.controllers.ApplicationController.index
+
++ nocsrf
+POST    /datasets                   org.talend.training.controllers.ApplicationController.createDataset
+GET     /datasets                   org.talend.training.controllers.ApplicationController.retrieveDatasets
+GET     /datasets/:id               org.talend.training.controllers.ApplicationController.retrieveDataset(id)
+PUT     /datasets/:id               org.talend.training.controllers.ApplicationController.updateDataset(id)
+DELETE  /datasets/:id               org.talend.training.controllers.ApplicationController.deleteDataset(id)
